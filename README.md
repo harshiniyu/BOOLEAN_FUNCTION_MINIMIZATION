@@ -34,18 +34,38 @@ A combinational circuit is a circuit in which the output depends on the present 
 
 
 **Program:**
+```
+module exp22(A,B,C,D,F1);
+input A,B,C,D;
+output F1;
+wire x1,x2,x3,x4,x5;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign F1=x1|x2|x3|x4|x5;
+endmodule
+```
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
 Developed by:Harshini Y
+
 RegisterNumber:212223240050
+
+
 
 
 **RTL realization**
 ![image](https://github.com/harshiniyu/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979786/97f81e91-00b4-46a5-a250-854243648e26)
 
+
+
 **truth table**
 ![image](https://github.com/harshiniyu/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979786/5e5e3e07-6f4f-4f20-9dda-a7d3fbe5de69)
+
+
 
 **Output:**
 ![image](https://github.com/harshiniyu/BOOLEAN_FUNCTION_MINIMIZATION/assets/144979786/4f8718f1-3465-4a6a-87b8-1256013c9533)
